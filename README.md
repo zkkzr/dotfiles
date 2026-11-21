@@ -12,3 +12,4 @@ Sway setup, based on martin-djakovic/dotfiles
 
 - monitors go to ~/.config/sway/outputs.d/local (not tracked)
 - lightdm autologin is a manual step (see /etc/lightdm/lightdm.conf)
+- backgrounds are used from ~/.local/share/backgrounds
