@@ -4,6 +4,19 @@ DEST="/mnt/external/home-backup"
 SOURCE="$HOME/"
 
 DATETIME="$(date +'%Y-%m-%d_%H-%M-%S')"
-LOG="$HOME/.local/state/rsync-home/$DATETIME.log"
+LOGDIR="$HOME/.local/state/rsync-home"
+LOG="$LOGDIR/$DATETIME.log"
 
-rsync -av --delete --exclude=".local/share/Trash/" --exclude=".steam/" --exclude=".local/share/Steam" --exclude="Games/" --log-file="$LOG" "$SOURCE" "$DEST/latest"
+mountpoint -q /mnt/external || exit 1
+mkdir -p "$LOGDIR" "$DEST"
+
+rsync \
+  -av \
+  --delete \
+  --exclude=".local/share/Trash/" \
+  --exclude=".steam/" \
+  --exclude=".local/share/Steam" \
+  --exclude="Games/" \
+  --log-file="$LOG" \
+  "$SOURCE" \
+  "$DEST/latest"

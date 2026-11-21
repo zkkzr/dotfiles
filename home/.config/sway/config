@@ -1,7 +1,7 @@
 include /etc/sway/config.d/*
 include ~/.config/sway/settings
 
-set $script_dir ~/.local/bin
+set $script_dir /usr/local/bin
 
 exec dbus-update-activation-environment --systemd --all
 exec systemctl --user start sway-session.target
@@ -15,7 +15,7 @@ exec_always {
     gsettings set org.gnome.desktop.wm.preferences button-layout ':'
     gsettings set org.gnome.desktop.interface cursor-theme $cursor_theme
     gsettings set org.gnome.desktop.interface cursor-size $cursor_size
-    gsettings set org.gnome.desktop.interface text-scaling-factor $dpi_scale
+    gsettings set org.gnome.desktop.interface text-scaling-factor 1.2
     gsettings set org.gnome.desktop.interface font-antialiasing 'grayscale'
 
     flatpak override --user --env=GTK_THEME=$gtk_theme
@@ -27,10 +27,11 @@ seat seat0 xcursor_theme $cursor_theme $cursor_size
 # OUTPUT CONFIGURATION
 
 # Wallpaper
-output * bg ~/.local/share/wallpapers/wallpaper.jpg fill
+output * bg /usr/share/backgrounds/custom/wallpaper_field.jpg fill
 
-# Monitor
-output eDP-1 resolution 2560x1440@240Hz adaptive_sync on allow_tearing yes
+# Monitors
+output DP-2 resolution 2560x1440@200Hz adaptive_sync on position 0 0
+output DP-1 resolution 2560x1440@180Hz adaptive_sync on position 2560 0
 
 # IDLE CONFIGURATION
 exec swayidle -w \
@@ -45,7 +46,7 @@ for_window [app_id="gamescope"] inhibit_idle focus
 # INPUT CONFIGURATION
 input type:pointer {
     accel_profile "flat"
-    pointer_accel -0.45
+    pointer_accel 0.1
 }
 
 input type:touchpad {
@@ -57,9 +58,8 @@ input type:touchpad {
 }
 
 input type:keyboard {
-    xkb_layout "us,rs"
-    xkb_variant ",latinyz"
-    xkb_options "grp:alt_shift_toggle,caps:super"
+    xkb_layout "us,ru"
+    xkb_options "grp:win_space_toggle"
 }
 
 # WINDOW DECORATIONS
@@ -79,23 +79,34 @@ for_window [instance="gufw.py"] floating enable
 
 # GENERAL KEYBINDINGS
 
+# Lock a session
+
+bindsym $mod+l exec hyprlock
+
 # Start a terminal
-bindsym $mod+Mod1+Return exec $term
+bindsym $mod+t exec $term
 
 # Start browser
 bindsym $mod+b exec $web
 
 # Start steam
-bindsym $mod+g exec env GDK_DPI_SCALE=$dpi_scale steam
+#bindsym $mod+g exec env GDK_DPI_SCALE=$dpi_scale steam
 
 # Start file browser
 bindsym $mod+f exec $file_browser
 
+# Start terminal file browser
+bindsym $mod+Mod1+f exec alacritty -e nnn
+
+# Screenshot
+bindsym $mod+Shift+s exec ~/.local/bin/screenshot
+
 # Kill focused window
-bindsym $mod+Mod1+c kill
+bindsym $mod+q kill
+bindsym Mod1+F4 kill
 
 # Start your launcher
-bindsym $mod+x exec $menu
+bindsym $mod+Return exec rofi -show drun
 
 floating_modifier $mod normal
 
@@ -157,7 +168,7 @@ bindsym $mod+h splith
 bindsym $mod+v splitv
 
 # Toggle the current focus between tiling and floating mode
-bindsym $mod+space floating toggle
+bindsym $mod+Mod1+space floating toggle
 
 # Swap focus between the tiling area and the floating area
 bindsym $mod+Shift+space focus mode_toggle
@@ -227,9 +238,10 @@ client.background       $bg
 
 # AUTOSTART
 exec_always {
+    hyprlock
     pidof /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
     pidof nm-applet || nm-applet
     pidof dunst || dunst
-    pidof steam || env GDK_DPI_SCALE=$dpi_scale steam -silent
+    #pidof steam || env GDK_DPI_SCALE=$dpi_scale steam -silent
     pidof keepassxc || keepassxc
 }

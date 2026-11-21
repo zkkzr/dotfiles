@@ -1,0 +1,13 @@
+#!/bin/sh
+tmp=$(mktemp --suffix=.png)
+trap 'rm -f "$tmp"' EXIT
+geometry=$(slurp) || exit 0
+grim -g "$geometry" "$tmp"
+where=$(printf 'Clipboard\nFile\nBoth\n' | wofi --dmenu -p Save) || exit 0
+file=~/Pictures/$(date +%F_%H-%M-%S).png
+mkdir -p ~/Pictures
+case "$where" in
+Clipboard) wl-copy -t image/png < "$tmp" ;;
+File) cp "$tmp" "$file" ;;
+Both) cp "$tmp" "$file"; wl-copy -t image/png < "$tmp" ;;
+esac
