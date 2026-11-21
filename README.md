@@ -4,7 +4,7 @@ Sway setup, based on martin-djakovic/dotfiles
 
 ## Install
 
-    git clone git@github.com:USER/dotfiles.git ~/dotfiles
+    git clone git@github.com/zkkzr/dotfiles.git ~/dotfiles
     cd ~/dotfiles
     ./install.sh
 
