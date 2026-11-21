@@ -1,4 +1,5 @@
 include /etc/sway/config.d/*
+include ~/.config/sway/outputs.d/*
 include ~/.config/sway/settings
 
 set $script_dir /usr/local/bin
@@ -30,8 +31,6 @@ seat seat0 xcursor_theme $cursor_theme $cursor_size
 output * bg /usr/share/backgrounds/custom/wallpaper_field.jpg fill
 
 # Monitors
-output DP-2 resolution 2560x1440@200Hz adaptive_sync on position 0 0
-output DP-1 resolution 2560x1440@180Hz adaptive_sync on position 2560 0
 
 # IDLE CONFIGURATION
 exec swayidle -w \

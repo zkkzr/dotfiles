@@ -1,0 +1,14 @@
+bibata-cursor-theme
+freetube-bin
+iwgtk
+lavat
+localsend-bin
+octopi
+peaclock
+spencers-macro-git
+stockfish
+tg-ws-proxy-git
+throne-bin
+vscodium-bin
+yay
+yay-debug
