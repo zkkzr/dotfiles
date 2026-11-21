@@ -1,0 +1,9 @@
+[Unit]
+Description=Weekly update notification
+
+[Timer]
+OnCalendar=weekly
+Persistent=true
+
+[Install]
+WantedBy=timers.target

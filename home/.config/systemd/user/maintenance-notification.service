@@ -1,0 +1,6 @@
+[Unit]
+Description=Monthly maintenance notification
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/maintenance-notification
