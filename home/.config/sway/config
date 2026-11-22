@@ -237,7 +237,6 @@ client.background       $bg
 
 # AUTOSTART
 exec_always {
-    hyprlock
     pidof /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
     pidof nm-applet || nm-applet
     pidof dunst || dunst
