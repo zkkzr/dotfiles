@@ -151,11 +151,11 @@ Rectangle {
             border.color: "#252525"
 
             HLabel {
-                x: 10
+                anchors.horizontalCenter: parent.horizontalCenter
                 y: 16.5 - height / 2
                 color: "#afa193"
                 font.bold: true
-                text: "welcome, " + root.esc(userInput.text) + "!"
+                text: "welcome!"
             }
 
             HLabel {
@@ -274,38 +274,23 @@ Rectangle {
             }
 
             Row {
-                x: 10
+                anchors.horizontalCenter: parent.horizontalCenter
                 y: 67 - height / 2
-                spacing: 16
+                spacing: 28
 
-                HLabel {
-                    text: "<font color='#afa193'>power:</font>"
+                Icon {
+                    kind: "sleep"
+                    onClicked: sddm.suspend()
                 }
 
-                HLabel {
-                    text: "\uf021"
-                    color: rebootArea.containsMouse ? "#f6f1ea" : "#afa193"
-                    font.pixelSize: 18
-                    MouseArea {
-                        id: rebootArea
-                        anchors.fill: parent
-                        hoverEnabled: true
-                        cursorShape: Qt.PointingHandCursor
-                        onClicked: sddm.reboot()
-                    }
+                Icon {
+                    kind: "reboot"
+                    onClicked: sddm.reboot()
                 }
 
-                HLabel {
-                    text: "\uf011"
-                    color: poweroffArea.containsMouse ? "#f6f1ea" : "#afa193"
-                    font.pixelSize: 18
-                    MouseArea {
-                        id: poweroffArea
-                        anchors.fill: parent
-                        hoverEnabled: true
-                        cursorShape: Qt.PointingHandCursor
-                        onClicked: sddm.powerOff()
-                    }
+                Icon {
+                    kind: "power"
+                    onClicked: sddm.powerOff()
                 }
             }
         }
