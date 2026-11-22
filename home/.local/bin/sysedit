@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+target=$(realpath -m "$1")
+repo="$HOME/dotfiles/system/root$target"
+if [ ! -e "$repo" ]; then
+  mkdir -p "$(dirname "$repo")"
+  if [ -e "$target" ]; then
+    cp "$target" "$repo"
+  fi
+fi
+${EDITOR:-nano} "$repo"
+sudo install -Dm644 "$repo" "$target"
