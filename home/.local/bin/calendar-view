@@ -1,0 +1,79 @@
+#!/bin/bash
+
+accent='\033[1;38;2;175;161;147m'
+reset='\033[0m'
+offset=0
+
+saved=$(stty -g)
+
+cleanup() {
+    printf '\033[?1006l\033[?1000l\033[?25h'
+    stty "$saved"
+}
+
+trap cleanup EXIT
+stty -echo
+printf '\033[?25l\033[?1000h\033[?1006h'
+
+draw() {
+    local first year month title today
+    first=$(date -d "$(date +%Y-%m-01) $offset month" +%Y-%m-01)
+    year=$(date -d "$first" +%Y)
+    month=$(date -d "$first" +%-m)
+    title=$(date -d "$first" +'%B %Y' | awk '{print tolower($0)}')
+    today=""
+    [ "$offset" -eq 0 ] && today=$(date +%-d)
+
+    printf '\033[H\033[2J'
+    printf "  ${accent}%s${reset}\n" "$title"
+    cal --monday --color=never "$month" "$year" | awk -v today="$today" '
+NR == 1 { next }
+NR == 2 { print "  " $0; next }
+NF {
+    out = "  "
+    for (i = 0; i < 7; i++) {
+        c = substr($0, i * 3 + 1, 2)
+        if (today != "" && c ~ /[0-9]/ && c + 0 == today) {
+            c = "\033[1;38;2;175;161;147m" c "\033[0m"
+        }
+        out = out c " "
+    }
+    print out
+}'
+    printf "\033[10;3H${accent}« prev${reset}\033[10;17H${accent}next »${reset}"
+}
+
+while :; do
+    draw
+    IFS= read -rsn1 -t 30 key || exit 0
+    [ "$key" = $'\033' ] || exit 0
+    IFS= read -rsn1 -t 0.05 k2 || exit 0
+    IFS= read -rsn1 -t 0.05 k3 || exit 0
+    case "$k2$k3" in
+        '[D' | 'OD') offset=$((offset - 1)) ;;
+        '[C' | 'OC') offset=$((offset + 1)) ;;
+        '[<')
+            mouse=""
+            while IFS= read -rsn1 -t 0.05 ch; do
+                mouse="$mouse$ch"
+                case "$ch" in M | m) break ;; esac
+            done
+            [ "${mouse: -1}" = "M" ] || continue
+            IFS=';' read -r b x y <<< "${mouse%M}"
+            case "$b" in
+                64) offset=$((offset - 1)) ;;
+                65) offset=$((offset + 1)) ;;
+                0)
+                    if [ "${y:-0}" = "10" ]; then
+                        if [ "${x:-0}" -le 12 ]; then
+                            offset=$((offset - 1))
+                        else
+                            offset=$((offset + 1))
+                        fi
+                    fi
+                    ;;
+            esac
+            ;;
+        *) exit 0 ;;
+    esac
+done

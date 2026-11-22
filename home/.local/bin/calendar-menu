@@ -1,0 +1,9 @@
+#!/bin/sh
+pkill -f 'class calendar-popup' && exit 0
+
+exec alacritty \
+    --class calendar-popup \
+    -o 'window.dimensions.columns=24' \
+    -o 'window.dimensions.lines=10' \
+    -o 'window.decorations="none"' \
+    -e "$HOME/.local/bin/calendar-view"
