@@ -1,6 +1,6 @@
 # dotfiles
 
-Sway setup, based on martin-djakovic/dotfiles
+Sway setup, based on (martin-djakovic/dotfiles)[https://github.com/martin-djakovic/dotfiles]
 
 ## Install
 
