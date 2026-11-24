@@ -3,10 +3,10 @@ case "$1" in
     *volume*|*brightness*) exit 0 ;;
 esac
 [ "$(dunstctl is-paused)" = "true" ] && exit 0
-dir=/usr/share/sounds/freedesktop/stereo
+dir="$HOME/.local/share/sounds"
 case "$5" in
-    CRITICAL) sound=dialog-warning ;;
+    CRITICAL) file="$dir/Warning.wav" ;;
     LOW) exit 0 ;;
-    *) sound=message ;;
+    *) file="$dir/Notification.wav" ;;
 esac
-paplay "$dir/$sound.oga" &
+paplay --volume=40000 "$file" &
