@@ -13,3 +13,7 @@ Sway setup, based on [martin-djakovic/dotfiles](https://github.com/martin-djakov
 - monitors go to ~/.config/sway/outputs.d/local (not tracked)
 - lightdm autologin is a manual step (see /etc/lightdm/lightdm.conf)
 - backgrounds are used from ~/.local/share/backgrounds
+
+## Credits
+
+Notification sounds are from AOSP (Android Open Source Project)
