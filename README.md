@@ -5,7 +5,7 @@ Sway setup, based on [martin-djakovic/dotfiles](https://github.com/martin-djakov
 ## Installation Script
 
 ~~~bash
-git clone git@github.com/zkkzr/dotfiles.git ~/dotfiles
+git clone https://github.com/zkkzr/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ./install.sh
 ~~~
