@@ -249,3 +249,7 @@ for_window [app_id="calendar-popup"] floating enable, border pixel 1, move posit
 exec sway-audio-idle-inhibit
 for_window [app_id=".*"] inhibit_idle fullscreen
 for_window [class=".*"] inhibit_idle fullscreen
+
+exec sway-audio-idle-inhibit
+for_window [app_id=".*"] inhibit_idle fullscreen
+for_window [class=".*"] inhibit_idle fullscreen
