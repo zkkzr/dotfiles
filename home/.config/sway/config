@@ -245,3 +245,7 @@ exec_always {
 }
 
 for_window [app_id="calendar-popup"] floating enable, border pixel 1, move position cursor, move left 130 px, move down 20 px
+
+exec sway-audio-idle-inhibit
+for_window [app_id=".*"] inhibit_idle fullscreen
+for_window [class=".*"] inhibit_idle fullscreen
