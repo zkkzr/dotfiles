@@ -17,3 +17,13 @@ Sway setup, based on [martin-djakovic/dotfiles](https://github.com/martin-djakov
 ## Credits
 
 Notification sounds are from AOSP (Android Open Source Project)
+
+## Credits
+
+Notification sounds come from AOSP (platform/frameworks/base, data/sounds),
+converted from ogg to wav:
+
+- Notification.wav: notifications/ogg/Selenium.ogg
+- Warning.wav: from the same directory tree
+
+Source: https://android.googlesource.com/platform/frameworks/base/+/5ac72a2/data/sounds/
