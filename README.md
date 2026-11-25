@@ -17,6 +17,10 @@ cd ~/dotfiles
 
 ## Credits
 
+[martin-djakovic/dotfiles](https://github.com/martin-djakovic/dotfiles)
+
+Base for those dotfiles
+
 ### AOSP
 
 Notification sounds come from AOSP (Android Open Source Project) (platform/frameworks/base, data/sounds),
