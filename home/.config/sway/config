@@ -24,6 +24,18 @@ set $web_browser firefox
 # your launcher
 set $launcher rofi -show drun
 
+# Workspaces
+set $ws1  1
+set $ws2  2
+set $ws3  3
+set $ws4  4
+set $ws5  5
+set $ws6  6
+set $ws7  7
+set $ws8  8
+set $ws9  9
+set $ws10 10
+
 # -------------------------------------------------------
 
 exec dbus-update-activation-environment --systemd --all
@@ -148,18 +160,6 @@ bindsym $mod+Mod1+$down move down
 bindsym $mod+Mod1+$up move up
 bindsym $mod+Mod1+$right move right
 
-# WORKSPACES
-set $ws1  1
-set $ws2  2
-set $ws3  3
-set $ws4  4
-set $ws5  5
-set $ws6  6
-set $ws7  7
-set $ws8  8
-set $ws9  9
-set $ws10 10
-
 # Workspace keybindings
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -171,17 +171,6 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
-
-bindsym $mod+Mod1+1 move container to workspace number $ws1
-bindsym $mod+Mod1+2 move container to workspace number $ws2
-bindsym $mod+Mod1+3 move container to workspace number $ws3
-bindsym $mod+Mod1+4 move container to workspace number $ws4
-bindsym $mod+Mod1+5 move container to workspace number $ws5
-bindsym $mod+Mod1+6 move container to workspace number $ws6
-bindsym $mod+Mod1+7 move container to workspace number $ws7
-bindsym $mod+Mod1+8 move container to workspace number $ws8
-bindsym $mod+Mod1+9 move container to workspace number $ws9
-bindsym $mod+Mod1+0 move container to workspace number $ws10
 
 # LAYOUT KEYBINDS
 bindsym $mod+h splith
@@ -205,7 +194,7 @@ bindsym --locked XF86MonBrightnessDown exec $script_dir/brightness-decrease
 bindsym --locked XF86MonBrightnessUp exec $script_dir/brightness-increase
 
 # Special key to take a screenshot with grim
-bindsym Print exec $script_dir/screenshot-menu
+# bindsym Print exec $script_dir/screenshot-menu
 
 # Display power menu
 bindsym --release $mod+Mod1+q exec $script_dir/power-menu 
