@@ -95,17 +95,30 @@ In main Sway config, Keybinds are listed under [General Keybinds](https://github
 
 ## Gallery
 
+
 ### Floating Window
-![Main](./screenshots/main.png)
+<div align="center">
+  <img src="./screenshots/main.png" alt="Main">
+</div>
+
 
 ### Tiled Windows
-![Tile](./screenshots/tile.png)
+<div align="center">
+  <img src="./screenshots/tile.png" alt="Tile">
+</div>
+
 
 ### Locked Screen
-![Lock](./screenshots/lock.png)
+<div align="center">
+  <img src="./screenshots/lock.png" alt="Lock">
+</div>
+
 
 ### SDDM Greeter
-![Sddm](./screenshots/sddm.png)
+<div align="center">
+  <img src="./screenshots/sddm.png" alt="Sddm">
+</div>
+
 
 ## Credits
 
