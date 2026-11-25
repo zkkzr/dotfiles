@@ -4,24 +4,27 @@ include ~/.config/sway/settings
 
 set $script_dir /usr/local/bin
 
-# Variables --------------------------------------------
+exec dbus-update-activation-environment --systemd --all
+exec systemctl --user start sway-session.target
 
-# terminal
+# **/ Variables /**
+
+# Terminal
 set $terminal alacritty
 
-# file manager
+# File manager
 set $file_browser thunar
 
-# terminal file manager
+# Terminal File Manager
 set $terminal_filemanager nnn
 
-# emoji manager
+# Emoji Manager
 set $emoji rofmoji
 
-# web broser
+# Web browser
 set $web_browser firefox
 
-# your launcher
+# Launcher
 set $launcher rofi -show drun
 
 # Workspaces
@@ -36,12 +39,7 @@ set $ws8  8
 set $ws9  9
 set $ws10 10
 
-# -------------------------------------------------------
-
-exec dbus-update-activation-environment --systemd --all
-exec systemctl --user start sway-session.target
-
-# GTK SETTINGS
+# **/ GTK Settings /**
 exec_always {
     gsettings set org.gnome.desktop.interface gtk-theme $gtk_theme
     gsettings set org.gnome.desktop.interface icon-theme $icon_theme
@@ -59,14 +57,7 @@ exec_always {
 
 seat seat0 xcursor_theme $cursor_theme $cursor_size
 
-# OUTPUT CONFIGURATION
-
-# Wallpaper
-output * bg ~/.local/share/backgrounds/wallpaper_field.jpg fill
-
-# Monitors
-
-# IDLE CONFIGURATION
+# **/ Idle Configuration /**
 exec swayidle -w \
     timeout 310 $script_dir/lock \
     timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
@@ -76,7 +67,7 @@ for_window [class="^.*"] inhibit_idle fullscreen
 for_window [app_id="^.*"] inhibit_idle fullscreen
 for_window [app_id="gamescope"] inhibit_idle focus
 
-# INPUT CONFIGURATION
+# **/ Input Configuration /**
 input type:pointer {
     accel_profile "flat"
     pointer_accel 0.1
@@ -95,13 +86,18 @@ input type:keyboard {
     xkb_options "grp:win_space_toggle"
 }
 
-# WINDOW DECORATIONS
+# **/ Output Configuration /**
+
+# Wallpaper
+output * bg ~/.local/share/backgrounds/wallpaper_field.jpg fill
+
+# **/ Window Decorations /**
 gaps inner 5
 gaps outer 0
 default_border pixel 2
 default_floating_border pixel 2
 
-# FLOATING RULES
+# Floating Rules
 for_window [window_type="dialog"] floating enable
 for_window [window_role="dialog"] floating enable
 
@@ -110,7 +106,7 @@ for_window [app_id="galculator"] floating enable
 for_window [app_id="gamescope"] floating enable
 for_window [instance="gufw.py"] floating enable
 
-# GENERAL KEYBINDS ---------------------------------------
+# **/ Keybinds /**
 
 # Lock a session
 bindsym $mod+l exec hyprlock
@@ -160,7 +156,7 @@ bindsym $mod+Mod1+$down move down
 bindsym $mod+Mod1+$up move up
 bindsym $mod+Mod1+$right move right
 
-# Workspace keybindings
+# Workspace keybinds
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
 bindsym $mod+3 workspace number $ws3
@@ -172,7 +168,7 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-# LAYOUT KEYBINDS
+# Layout Keybinds
 bindsym $mod+h splith
 bindsym $mod+v splitv
 
@@ -182,7 +178,7 @@ bindsym $mod+Mod1+space floating toggle
 # Swap focus between the tiling area and the floating area
 bindsym $mod+Shift+space focus mode_toggle
 
-# UTILITIES/ACTION KEYBINDINGS
+# Utily Action Keybinds
 
 # Special keys to adjust volume via PulseAudio
 bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle && $script_dir/volume-notification
@@ -197,10 +193,9 @@ bindsym --locked XF86MonBrightnessUp exec $script_dir/brightness-increase
 # bindsym Print exec $script_dir/screenshot-menu
 
 # Display power menu
-bindsym --release $mod+Mod1+q exec $script_dir/power-menu 
-#------------------------------------------------------------------------
+bindsym --release $mod+Mod1+q exec $script_dir/power-menu
 
-# STATUS BAR
+# **/ Status Bar /**
 bar {
     position top
 
@@ -218,7 +213,7 @@ bar {
     }
 }
 
-# WINDOW COLORS
+# **/ Window Colors /**
 # class                 border  backgr. text    indicator child_border
 client.focused          $accent $bg     $fg     $accent   $accent
 client.focused_inactive $bg     $bg     $fg     $bg       $bg
@@ -228,7 +223,8 @@ client.placeholder      $bg     $bg     $fg     $bg       $bg
 
 client.background       $bg
 
-# AUTOSTART
+# **/ Autostart /**
+
 exec_always {
     pidof /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
     pidof nm-applet || nm-applet
