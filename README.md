@@ -14,6 +14,8 @@
 
 For other distributions, please refer to the [Manual Installation](https://github.com/zkkzr/dotfiles/blob/main/README.md#manual-installation)
 
+Auto Installation Script:
+
 ~~~bash
 git clone https://github.com/zkkzr/dotfiles.git ~/dotfiles
 cd dotfiles
