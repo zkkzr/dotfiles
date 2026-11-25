@@ -52,7 +52,7 @@ wofi
 sway-audio-idle-inhibit-git
 ~~~
 
-After installing the packages, run this script to symlink the configuration files:
+After installing the packages, run this script to automaticslly link the configuration files:
 
 ~~~bash
 git clone https://github.com/zkkzr/dotfiles.git ~/dotfiles
