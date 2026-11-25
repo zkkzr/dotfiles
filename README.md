@@ -105,7 +105,7 @@ In main Sway config, Keybinds are listed under [General Keybinds]("https://githu
 
 ### Base
 Source: [martin-djakovic/dotfiles](https://github.com/martin-djakovic/dotfiles)  
-This repository **is** the base for these dotfiles.
+This repository is the base for these dotfiles.
 
 ### Sounds
 
