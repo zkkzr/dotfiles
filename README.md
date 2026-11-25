@@ -2,7 +2,7 @@
 
 Sway setup, based on [martin-djakovic/dotfiles](https://github.com/martin-djakovic/dotfiles)
 
-## Installation Script
+## Auto Installation Script
 
 please note that installation script is arch-linux only
 for other distros refer to Manual installation
@@ -39,10 +39,11 @@ sway-audio-idle-inhibit-git
 
 after that:
 
+~~~
 git clone https://github.com/zkkzr/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ./install.sh
-
+~~~
 
 ## Notes
 
@@ -54,9 +55,11 @@ cd ~/dotfiles
 ### Base
 source: [martin-djakovic/dotfiles](https://github.com/martin-djakovic/dotfiles)
 
-Base for those dotfiles
+Base for these dotfiles
 
-### AOSP
+### Sounds
+
+#### AOSP
 
 Notification sounds come from AOSP (Android Open Source Project) (platform/frameworks/base, data/sounds),
 converted from ogg to wav:
