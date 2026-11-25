@@ -17,3 +17,5 @@ wl-clipboard
 wofi
 imagemagick
 sddm
+
+noto-fonts-emoji
