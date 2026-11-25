@@ -52,7 +52,7 @@ cd ~/dotfiles
 ### General
 | Keybind | Action | Default Tool |
 | :--- | :--- | :--- |
-| `Super+t` | Terminal | Alacritty |
+| `Super+t` | Terminal | Alacritty                                        |
 | `Super+b` | Browser | Firefox |
 | `Super+.` | Emoji manager | rofmoji |
 | `Super+f` | File manager | Thunar |
@@ -73,7 +73,7 @@ cd ~/dotfiles
 ### System
 | Keybind | Action |
 | :--- | :--- |
-| `Super+Lshift+c` | Reload Sway and Waybar |
+| `Super+Lshift+c` | Reload Sway and Waybar                             |
 | `Super+Lalt+q` | Display power menu |
 
 In main Sway config, Keybinds are listed under [General Keybinds]("https://github.com/zkkzr/dotfiles/blob/main/home/.config/sway/config") Section
