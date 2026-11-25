@@ -43,7 +43,7 @@ After installing the packages, run:
 
 ~~~bash
 git clone https://github.com/zkkzr/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+cd dotfiles
 ./install.sh
 ~~~
 
