@@ -87,6 +87,20 @@ In main Sway config, Keybinds are listed under [General Keybinds]("https://githu
 - **Monitors:** Configurations are located in `~/.config/sway/outputs.d/local` (not tracked by git).
 - **Backgrounds:** Wallpapers are stored in `~/.local/share/backgrounds`.
 
+## Gallery
+
+# Floating Window
+![Main](./screenshots/main.png)
+
+# Tiled Windows
+![Tile](./screenshots/tile.png)
+
+# Locked Screen
+![Lock](./screenshots/lock.png)
+
+# SDDM Greeter
+![Sddm](./screenshots/sddm.png)
+
 ## Credits
 
 ### Base
