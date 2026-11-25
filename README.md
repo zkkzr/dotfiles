@@ -11,12 +11,13 @@ For other distributions, please refer to the **Manual Installation**
 ~~~bash
 git clone https://github.com/zkkzr/dotfiles.git ~/dotfiles
 cd dotfiles
+chmod +x install.sh
 ./install.sh
 ~~~
 
 ## Manual installation
 
-This is not a fully manual installation. Although, you still will have to install the following packages yourself:
+This is not a fully manual installation. Although, you still will have to install following packages yourself:
 
 ~~~txt
 alacritty
@@ -44,6 +45,7 @@ After installing the packages, run:
 ~~~bash
 git clone https://github.com/zkkzr/dotfiles.git ~/dotfiles
 cd dotfiles
+chmod +x manual_install.sh
 ./manual_install.sh
 ~~~
 
