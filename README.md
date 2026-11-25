@@ -1,8 +1,10 @@
-# Dotfiles
+<h1 align="center">Dotfiles</h1>
 
-![Main](./screenshots/main.png)
+<div align="center">
+  <img src="./screenshots/main.png" alt="Main Screenshot">
+</div>
 
-Sway setup based on [martin-djakovic/dotfiles](https://github.com/martin-djakovic/dotfiles)
+<p align="center">Sway setup based on <a href="https://github.com/martin-djakovic/dotfiles">martin-djakovic/dotfiles</a></p>
 
 ## Installation
 
