@@ -92,7 +92,7 @@ Alternatively, you can link the files manually
 | `Super+Lshift+c` | Reload Sway and Waybar |
 | `Super+Lalt+q` | Display power menu |
 
-In main Sway config, Keybinds are listed under [General Keybinds](https://github.com/zkkzr/dotfiles/blob/home/.config/sway/config#L101) Section
+In main Sway config, Keybinds are listed under [General Keybinds](https://github.com/zkkzr/dotfiles/blob/f43136416157d706b48b3a6687d73558bb383d19/home/.config/sway/config#L101) Section
 
 ## Notes
 
