@@ -8,7 +8,7 @@ Sway setup based on [martin-djakovic/dotfiles](https://github.com/martin-djakovi
 
 **Please note:** The installation script is for **Arch Linux** only.
 
-For other distributions, please refer to the **Manual Installation**
+For other distributions, please refer to the [Manual Installation](https://github.com/zkkzr/dotfiles/blob/main/README.md#manual-installation)
 
 ~~~bash
 git clone https://github.com/zkkzr/dotfiles.git ~/dotfiles
