@@ -98,10 +98,9 @@ for_window [app_id="galculator"] floating enable
 for_window [app_id="gamescope"] floating enable
 for_window [instance="gufw.py"] floating enable
 
-# GENERAL KEYBINDINGS
+# GENERAL KEYBINDS ---------------------------------------
 
 # Lock a session
-
 bindsym $mod+l exec hyprlock
 
 # Start a terminal
@@ -113,10 +112,10 @@ bindsym $mod+b exec $web_browser
 # Start emoji manager
 bindsym $mod+period exec $emoji
 
-# Start file browser
+# Start file manager
 bindsym $mod+f exec $file_browser
 
-# Start terminal file browser
+# Start terminal file manager
 bindsym $mod+Mod1+f exec $terminal -e $terminal_filemanager
 
 # Screenshot
@@ -194,24 +193,6 @@ bindsym $mod+Mod1+space floating toggle
 # Swap focus between the tiling area and the floating area
 bindsym $mod+Shift+space focus mode_toggle
 
-# Resizing containers:
-mode "< R >" {
-    # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
-
-    # Return to default mode
-    bindsym Escape mode "default"
-    bindsym $mod+r mode "default"
-}
-
-bindsym $mod+r mode "< R >"
-
 # UTILITIES/ACTION KEYBINDINGS
 
 # Special keys to adjust volume via PulseAudio
@@ -227,7 +208,8 @@ bindsym --locked XF86MonBrightnessUp exec $script_dir/brightness-increase
 bindsym Print exec $script_dir/screenshot-menu
 
 # Display power menu
-bindsym --release $mod+Mod1+q exec $script_dir/power-menu
+bindsym --release $mod+Mod1+q exec $script_dir/power-menu 
+#------------------------------------------------------------------------
 
 # STATUS BAR
 bar {
