@@ -49,26 +49,28 @@ cd ~/dotfiles
 
 ## Keybinds
 
-Super+t             -- Terminal              (By default Alacritty)
-Super+b             -- Browser               (By default Firefox)
-Super+.             -- Emoji manager         (By default rofmoji)
-Super+f             -- File manager          (By default Thunar)
-Super+Lalt+f        -- Terminal File manager (By default nnn) 
-Super+Lshift+s      -- Screenshooter         (By default custom script)
-Super+Enter         -- Launcher              (By default rofi drun)
+~~~txt
+Super+t             - Terminal              (By default Alacritty)
+Super+b             - Browser               (By default Firefox)
+Super+.             - Emoji manager         (By default rofmoji)
+Super+f             - File manager          (By default Thunar)
+Super+Lalt+f        - Terminal File manager (By default nnn) 
+Super+Lshift+s      - Screenshooter         (By default custom script)
+Super+Enter         - Launcher              (By default rofi drun)
 
-Super+q             -- To kill focused window
-Lalt+f4             -- To kill focused window
+Super+q             - To kill focused window
+Lalt+f4             - To kill focused window
 
-Super+Lshift+c      -- Reload Sway and Waybar
+Super+Lshift+c      - Reload Sway and Waybar
 
-Super+Lshift+Space  -- Swap focus between the tiling area and the floating area
-(Hold) Super+Mouse1 -- To drag focused window
+Super+Lshift+Space  - Swap focus between the tiling area and the floating area
+(Hold) Super+Mouse1 - To drag focused window
 
-Super+h             -- Switch to horizontal tiling
-Super+v             -- Switch to vertical   tiling
+Super+h             - Switch to horizontal tiling
+Super+v             - Switch to vertical   tiling
 
-Super+Lalt+q        -- Display power menu
+Super+Lalt+q        - Display power menu
+~~~
 
 In config, Keybinds are listed under (https://github.com/zkkzr/dotfiles/blob/main/home/.config/sway/config)["General Keybinds"] Section
 
