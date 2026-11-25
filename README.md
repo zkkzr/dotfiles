@@ -80,7 +80,7 @@ chmod +x manual_install.sh
 | `Super+Lshift+c` | Reload Sway and Waybar |
 | `Super+Lalt+q` | Display power menu |
 
-In main Sway config, Keybinds are listed under [General Keybinds]("https://github.com/zkkzr/dotfiles/blob/main/home/.config/sway/config") Section
+In main Sway config, Keybinds are listed under [General Keybinds](https://github.com/zkkzr/dotfiles/blob/main/home/.config/sway/config) Section
 
 ## Notes
 
