@@ -1,6 +1,8 @@
 # Dotfiles
 
-Sway setup, based on [martin-djakovic/dotfiles](https://github.com/martin-djakovic/dotfiles)
+![Main Screenshot](./screenshots/main.png)
+
+Sway setup based on [martin-djakovic/dotfiles](https://github.com/martin-djakovic/dotfiles)
 
 ## Auto Installation Script
 
