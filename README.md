@@ -89,16 +89,16 @@ In main Sway config, Keybinds are listed under [General Keybinds]("https://githu
 
 ## Gallery
 
-# Floating Window
+### Floating Window
 ![Main](./screenshots/main.png)
 
-# Tiled Windows
+### Tiled Windows
 ![Tile](./screenshots/tile.png)
 
-# Locked Screen
+### Locked Screen
 ![Lock](./screenshots/lock.png)
 
-# SDDM Greeter
+### SDDM Greeter
 ![Sddm](./screenshots/sddm.png)
 
 ## Credits
