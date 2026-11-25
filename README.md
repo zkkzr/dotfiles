@@ -17,8 +17,8 @@ cd ~/dotfiles
 
 ## Credits
 
-[martin-djakovic/dotfiles](https://github.com/martin-djakovic/dotfiles)
-
+### Base
+source: [martin-djakovic/dotfiles](https://github.com/martin-djakovic/dotfiles)
 Base for those dotfiles
 
 ### AOSP
@@ -29,4 +29,4 @@ converted from ogg to wav:
 - Notification.wav: notifications/ogg/Selenium.ogg
 - Warning.wav: notifications/ogg/Syrma.ogg
 
-Source: https://android.googlesource.com/platform/frameworks/base/+/5ac72a2/data/sounds/
+Source: [AOSP/platform/frameworks/base/+/5ac72a2/data/sounds/](https://android.googlesource.com/platform/frameworks/base/+/5ac72a2/data/sounds/)
