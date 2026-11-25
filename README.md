@@ -11,7 +11,7 @@ For other distributions, please refer to the **Manual Installation**
 ~~~bash
 git clone https://github.com/zkkzr/dotfiles.git ~/dotfiles
 cd ~/dotfiles
-./arch-install.sh
+./install.sh
 ~~~
 
 ## Manual installation
