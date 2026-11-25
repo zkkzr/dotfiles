@@ -10,7 +10,7 @@ For other distributions, please refer to the **Manual Installation**
 
 ~~~bash
 git clone https://github.com/zkkzr/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+cd dotfiles
 ./install.sh
 ~~~
 
