@@ -16,3 +16,4 @@ waybar
 wl-clipboard
 wofi
 imagemagick
+sddm
