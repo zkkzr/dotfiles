@@ -5,6 +5,7 @@ Sway setup, based on [martin-djakovic/dotfiles](https://github.com/martin-djakov
 ## Auto Installation Script
 
 please note that installation script is arch-linux only
+
 for other distros refer to Manual installation
 
 ~~~bash
