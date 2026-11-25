@@ -4,6 +4,28 @@ include ~/.config/sway/settings
 
 set $script_dir /usr/local/bin
 
+# Variables --------------------------------------------
+
+# terminal
+set $terminal alacritty
+
+# file manager
+set $file_browser thunar
+
+# terminal file manager
+set $terminal_filemanager nnn
+
+# emoji manager
+set $emoji rofmoji
+
+# web broser
+set $web_browser firefox
+
+# your launcher
+set $launcher rofi -show drun
+
+# -------------------------------------------------------
+
 exec dbus-update-activation-environment --systemd --all
 exec systemctl --user start sway-session.target
 
@@ -20,7 +42,7 @@ exec_always {
     gsettings set org.gnome.desktop.interface font-antialiasing 'grayscale'
 
     flatpak override --user --env=GTK_THEME=$gtk_theme
-    flatpak override --user --env=ICON_THEME=$icon_theme
+    flatpak override --user -env=ICON_THEME=$icon_theme
 }
 
 seat seat0 xcursor_theme $cursor_theme $cursor_size
@@ -83,19 +105,19 @@ for_window [instance="gufw.py"] floating enable
 bindsym $mod+l exec hyprlock
 
 # Start a terminal
-bindsym $mod+t exec $term
+bindsym $mod+t exec $terminal
 
 # Start browser
-bindsym $mod+b exec $web
+bindsym $mod+b exec $web_browser
 
-# Start steam
-#bindsym $mod+g exec env GDK_DPI_SCALE=$dpi_scale steam
+# Start emoji manager
+bindsym $mod+period exec $emoji
 
 # Start file browser
 bindsym $mod+f exec $file_browser
 
 # Start terminal file browser
-bindsym $mod+Mod1+f exec alacritty -e nnn
+bindsym $mod+Mod1+f exec $terminal -e $terminal_filemanager
 
 # Screenshot
 bindsym $mod+Shift+s exec ~/.local/bin/screenshot
@@ -104,12 +126,12 @@ bindsym $mod+Shift+s exec ~/.local/bin/screenshot
 bindsym $mod+q kill
 bindsym Mod1+F4 kill
 
-# Start your launcher
-bindsym $mod+Return exec rofi -show drun
+# Start launcher
+bindsym $mod+Return exec $launcher 
 
 floating_modifier $mod normal
 
-# Reload the configuration file
+# Reload sway
 bindsym $mod+Shift+c reload
 
 # Exit sway (logs you out of your Wayland session)
