@@ -1,10 +1,12 @@
 # Dotfiles
 
-![Main Screenshot](./screenshots/main.png)
+![Main](./screenshots/main.png)
 
 Sway setup based on [martin-djakovic/dotfiles](https://github.com/martin-djakovic/dotfiles)
 
-## Auto Installation Script
+## Installation
+
+### Auto Installation Script
 
 **Please note:** The installation script is for **Arch Linux** only.
 
@@ -17,9 +19,9 @@ chmod +x install.sh
 ./install.sh
 ~~~
 
-## Manual installation
+### Manual installation
 
-This is not a fully manual installation. Although, you still will have to install following packages yourself:
+To install manually, first install the following packages:
 
 ~~~txt
 alacritty
@@ -42,7 +44,7 @@ wofi
 sway-audio-idle-inhibit-git
 ~~~
 
-After installing the packages, run:
+After installing the packages, run this script to symlink the configuration files:
 
 ~~~bash
 git clone https://github.com/zkkzr/dotfiles.git ~/dotfiles
@@ -50,6 +52,8 @@ cd dotfiles
 chmod +x manual_install.sh
 ./manual_install.sh
 ~~~
+
+Alternatively, you can link the files manually
 
 ## Keybinds
 
@@ -104,8 +108,9 @@ In main Sway config, Keybinds are listed under [General Keybinds](https://github
 ## Credits
 
 ### Base
-Source: [martin-djakovic/dotfiles](https://github.com/martin-djakovic/dotfiles)  
 This repository is the base for these dotfiles.
+
+Source: [martin-djakovic/dotfiles](https://github.com/martin-djakovic/dotfiles)  
 
 ### Sounds
 
