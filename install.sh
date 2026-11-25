@@ -1,6 +1,7 @@
 #!/bin/sh
 cd "$(dirname "$0")"
 sudo pacman -S --needed - < pkglist.txt
+yay -S --needed - < pkglist-aur.txt
 stow -t ~ home
 fc-cache -f
 systemctl --user daemon-reload
