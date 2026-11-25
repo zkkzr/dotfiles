@@ -49,28 +49,37 @@ cd ~/dotfiles
 
 ## Keybinds
 
-~~~txt
-Super+t             - Terminal              (By default Alacritty)
-Super+b             - Browser               (By default Firefox)
-Super+.             - Emoji manager         (By default rofmoji)
-Super+f             - File manager          (By default Thunar)
-Super+Lalt+f        - Terminal File manager (By default nnn) 
-Super+Lshift+s      - Screenshooter         (By default custom script)
-Super+Enter         - Launcher              (By default rofi drun)
+## Keybinds
 
-Super+q             - To kill focused window
-Lalt+f4             - To kill focused window
+### General
+| Keybind | Action | Default Tool |
+| :--- | :--- | :--- |
+| `Super+t` | Terminal | Alacritty |
+| `Super+b` | Browser | Firefox |
+| `Super+.` | Emoji manager | rofmoji |
+| `Super+f` | File manager | Thunar |
+| `Super+Lalt+f` | Terminal File manager | nnn |
+| `Super+Lshift+s` | Screenshooter | Custom script |
+| `Super+Enter` | Launcher | rofi drun |
 
-Super+Lshift+c      - Reload Sway and Waybar
+### Window Management
+| Keybind | Action |
+| :--- | :--- |
+| `Super+q` | Kill focused window |
+| `Lalt+f4` | Kill focused window |
+| `Super+h` | Switch to horizontal tiling |
+| `Super+v` | Switch to vertical tiling |
+| `Super+Lshift+Space` | Swap focus: Tiling $\leftrightarrow$ Floating |
+| `Super+Mouse1` (Hold) | Drag focused window |
 
-Super+Lshift+Space  - Swap focus between the tiling area and the floating area
-(Hold) Super+Mouse1 - To drag focused window
+### System
+| Keybind | Action |
+| :--- | :--- |
+| `Super+Lshift+c` | Reload Sway and Waybar |
+| `Super+Lalt+q` | Display power menu |
 
-Super+h             - Switch to horizontal tiling
-Super+v             - Switch to vertical   tiling
+In the main Sway config, these are listed under the [General Keybinds](https://github.com/zkkzr/dotfiles/blob/main/home/.config/sway/config) section.
 
-Super+Lalt+q        - Display power menu
-~~~
 
 In main Sway config, Keybinds are listed under [General Keybinds]("https://github.com/zkkzr/dotfiles/blob/main/home/.config/sway/config") Section
 
