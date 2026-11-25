@@ -16,7 +16,7 @@ cd ~/dotfiles
 
 ## Manual installation
 
-This is a not a fully manual installation. Although, you still will have to install the following packages yourself:
+This is not a fully manual installation. Although, you still will have to install the following packages yourself:
 
 ~~~txt
 alacritty
