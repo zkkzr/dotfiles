@@ -25,6 +25,8 @@ chmod +x install.sh
 ./install.sh
 ~~~
 
+---
+
 ### Manual installation
 
 To install manually, first install the following packages:
