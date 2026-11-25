@@ -67,7 +67,7 @@ cd ~/dotfiles
 | `Lalt+f4` | Kill focused window |
 | `Super+h` | Switch to horizontal tiling |
 | `Super+v` | Switch to vertical tiling |
-| `Super+Lshift+Space` | Swap focus: Tiling $\leftrightarrow$ Floating |
+| `Super+Lalt+Space` | Switch focused winodow between tiling / floating |
 | `Super+Mouse1` (Hold) | Drag focused window |
 
 ### System
