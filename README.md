@@ -49,8 +49,6 @@ cd ~/dotfiles
 
 ## Keybinds
 
-## Keybinds
-
 ### General
 | Keybind | Action | Default Tool |
 | :--- | :--- | :--- |
