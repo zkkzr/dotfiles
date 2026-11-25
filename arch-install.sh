@@ -1,11 +1,13 @@
 #!/bin/sh
 
-if ! command -v yay >/dev/null 2>&1; then
-    echo "Installing yay..."
-    cd ~/
-    sudo pacman -S --needed git base-devel
-    git clone https://aur.archlinux.org/yay.git
-    cd yay && makepkg -si
+if command -v yay >/dev/null 2>&1; then
+    echo "Using yay..."
+    AUR_HELPER="yay"
+elif command -v paru >/dev/null 2>&1; then
+    echo "Using paru..."
+    AUR_HELPER="paru"
+else
+    echo "Neither paru nor yay found. Please install one of them first, or install the packages in 'pkglist-aur.txt' yourself! Otherwise, the Sway installation will not be complete correctly."
 fi
 
 cd "$(dirname "$0")"
