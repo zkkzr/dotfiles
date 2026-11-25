@@ -26,7 +26,7 @@ cd "$(dirname "$0")"
 sudo pacman -S --needed - < pkglist.txt
 yay -S --needed - < pkglist-aur.txt
 
-stow -t ~ home
+stow -t ~ home --adopt
 fc-cache -f
 systemctl --user daemon-reload
 systemctl --user enable update-notification.timer maintenance-notification.timer
