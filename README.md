@@ -52,7 +52,7 @@ sway-audio-idle-inhibit-git
 sddm
 imagemagick
 noto-fonts-emoji
-rofmoji
+rofimoji
 polkit-gnome
 rm-applet
 keepassxc
@@ -76,7 +76,7 @@ Alternatively, you can link the files manually
 | :--- | :--- | :--- |
 | `Super+t` | Terminal | Alacritty |
 | `Super+b` | Browser | Firefox |
-| `Super+.` | Emoji manager | rofmoji |
+| `Super+.` | Emoji manager | rofimoji |
 | `Super+f` | File manager | Thunar |
 | `Super+Lalt+f` | Terminal File manager | nnn |
 | `Super+Lshift+s` | Screenshooter | Custom script |

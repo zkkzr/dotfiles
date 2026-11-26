@@ -2,7 +2,7 @@ include /etc/sway/config.d/*
 include ~/.config/sway/outputs.d/*
 include ~/.config/sway/settings
 
-set $script_dir /usr/local/bin
+set $script_dir ~/.local/bin
 
 exec dbus-update-activation-environment --systemd --all
 exec systemctl --user start sway-session.target
@@ -19,7 +19,7 @@ set $file_browser thunar
 set $terminal_filemanager nnn
 
 # Emoji Manager
-set $emoji rofmoji
+set $emoji rofimoji
 
 # Web browser
 set $web_browser firefox
