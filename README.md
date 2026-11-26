@@ -50,7 +50,10 @@ Alternatively, you can link the files manually with `stow -t ~ home`.
 | `Super+l` | Lock session |
 | `Super+Shift+e | Exit wayland sesion |
 
-In main Sway config, Keybinds are listed under [General Keybinds](https://github.com/zkkzr/dotfiles/blob/main/home/.config/sway/config#L109) Section
+Keybinds are listed under [General Keybinds](https://github.com/zkkzr/dotfiles/blob/main/home/.config/sway/config#L89) Section In main sway config
+
+Default apps are listed in [sway/settings](https://github.com/zkkzr/dotfiles/blob/main/home/.config/sway/settings#L8)
+
 
 ## Notes
 
