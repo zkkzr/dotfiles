@@ -52,7 +52,7 @@ Alternatively, you can link the files manually with `stow -t ~ home`.
 
 Keybinds are listed under [General Keybinds](https://github.com/zkkzr/dotfiles/blob/main/home/.config/sway/config#L89) Section In main sway config
 
-Default apps are listed in [sway/settings](https://github.com/zkkzr/dotfiles/blob/main/home/.config/sway/settings#L8)
+Default apps are listed in [sway/settings](https://github.com/zkkzr/dotfiles/blob/main/home/.config/sway/settings#L9)
 
 
 ## Notes
