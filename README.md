@@ -12,7 +12,7 @@
 
 **Please note:** The installation script is for **Arch Linux** only.
 
-For other distributions, please refer to the [Manual Installation](https://github.com/zkkzr/dotfiles/blob/main/README.md#manual-installation)
+For other distributions, please refer to the [Manual Installation](https://github.com/zkkzr/dotfiles/blob/main/README.md#other-distributions)
 
 ---
 
