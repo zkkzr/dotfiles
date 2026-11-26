@@ -21,6 +21,7 @@ Alternatively, you can link the files manually with `stow -t ~ home`.
 ## Keybinds
 
 ### General
+
 | Keybind | Action | Default Tool |
 | :--- | :--- | :--- |
 | `Super+t` | Terminal | Alacritty |
@@ -33,6 +34,7 @@ Alternatively, you can link the files manually with `stow -t ~ home`.
 | `Super+Enter` | Launcher | rofi drun |
 
 ### Window Management
+
 | Keybind | Action |
 | :--- | :--- |
 | `Super+q` | Kill focused window |
@@ -43,12 +45,13 @@ Alternatively, you can link the files manually with `stow -t ~ home`.
 | `Super+Mouse1` (Hold) | Drag focused window |
 
 ### System
+
 | Keybind | Action |
 | :--- | :--- |
 | `Super+Lshift+c` | Reload Sway and Waybar |
 | `Super+Lalt+q` | Display power menu |
 | `Super+l` | Lock session |
-| `Super+Shift+e | Exit wayland sesion |
+| `Super+Shift+e` | Exit wayland sesion |
 
 Keybinds are listed under [General Keybinds](https://github.com/zkkzr/dotfiles/blob/main/home/.config/sway/config#L89) Section In main sway config
 
