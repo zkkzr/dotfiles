@@ -26,45 +26,16 @@ sh install.sh
 
 ---
 
-### Manual installation
+### Other distributions
 
-To install manually, first install the following packages:
-
-~~~txt
-alacritty
-alsa-utils
-brightnessctl
-dunst
-grim
-hyprlock
-lightdm
-nnn
-rofi
-rsync
-stow
-sway
-swaybg
-swayidle
-waybar
-wl-clipboard
-wofi
-sway-audio-idle-inhibit-git
-sddm
-imagemagick
-noto-fonts-emoji
-rofimoji
-polkit-gnome
-rm-applet
-keepassxc
-thunar
-~~~
+On Arch based systems the script installs the packages from [pkglist.txt](https://github.com/zkkzr/dotfiles/blob/main/pkglist.txt) and [pkglist-aur.txt](sway-audio-idle-inhibit-git) automatically. On other distributions it only links the configuration files with GNU stow, so install the packages from those lists yourself first (names are from Arch and may differ).
 
 After installing the packages, run this script to automatically link the configuration files:
 
 ~~~bash
 git clone https://github.com/zkkzr/dotfiles.git ~/dotfiles
 cd dotfiles
-sh manual_install.sh
+sh install.sh
 ~~~
 
 Alternatively, you can link the files manually
@@ -100,7 +71,7 @@ Alternatively, you can link the files manually
 | `Super+l` | Lock session |
 | `Super+Shift+e | Exit wayland sesion |
 
-In main Sway config, Keybinds are listed under [General Keybinds](https://github.com/zkkzr/dotfiles/blob/main/home/.config/sway/config#L101) Section
+In main Sway config, Keybinds are listed under [General Keybinds](https://github.com/zkkzr/dotfiles/blob/main/home/.config/sway/config#L109) Section
 
 ## Notes
 

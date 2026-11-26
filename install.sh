@@ -8,11 +8,6 @@ if [ "$(id -u)" -eq 0 ]; then
     exit 1
 fi
 
-if ! command -v pacman >/dev/null 2>&1; then
-    echo "This script supports Arch based systems only."
-    exit 1
-fi
-
 ask() {
     printf "%s (y/N): " "$1"
     read -r answer
@@ -26,32 +21,53 @@ list() {
     grep -vE '^[[:space:]]*(#|$)' "$1" | tr '\n' ' '
 }
 
-AUR_HELPER=""
-if command -v yay >/dev/null 2>&1; then
-    AUR_HELPER="yay"
-elif command -v paru >/dev/null 2>&1; then
-    AUR_HELPER="paru"
-fi
-
-if [ -n "$AUR_HELPER" ]; then
-    echo "Using $AUR_HELPER..."
-else
-    echo "Neither paru nor yay found. Please install one of them first, or install the packages in 'pkglist-aur.txt' yourself! Otherwise, the Sway installation will not be complete correctly."
-    ask "Do you want to continue anyway?" || { echo "Installation aborted."; exit 1; }
-fi
-
-sudo pacman -S --needed git stow
-
-pkgs=$(list pkglist.txt)
-if [ -n "$pkgs" ]; then
-    sudo pacman -S --needed $pkgs
-fi
-
-if [ -n "$AUR_HELPER" ]; then
-    aur=$(list pkglist-aur.txt)
-    if [ -n "$aur" ]; then
-        "$AUR_HELPER" -S --needed $aur
+install_arch_packages() {
+    AUR_HELPER=""
+    if command -v yay >/dev/null 2>&1; then
+        AUR_HELPER="yay"
+    elif command -v paru >/dev/null 2>&1; then
+        AUR_HELPER="paru"
     fi
+
+    if [ -n "$AUR_HELPER" ]; then
+        echo "Using $AUR_HELPER..."
+    else
+        echo "Neither paru nor yay found. Please install one of them first, or install the packages in 'pkglist-aur.txt' yourself! Otherwise, the Sway installation will not be completed correctly."
+        ask "Do you want to continue anyway?" || { echo "Installation aborted."; exit 1; }
+    fi
+
+    sudo pacman -S --needed git stow
+
+    pkgs=$(list pkglist.txt)
+    if [ -n "$pkgs" ]; then
+        sudo pacman -S --needed $pkgs
+    fi
+
+    if [ -n "$AUR_HELPER" ]; then
+        aur=$(list pkglist-aur.txt)
+        if [ -n "$aur" ]; then
+            "$AUR_HELPER" -S --needed $aur
+        fi
+    fi
+}
+
+check_manual_packages() {
+    if ! command -v stow >/dev/null 2>&1; then
+        echo "Error: 'stow' is not installed. Please install it first."
+        exit 1
+    fi
+
+    echo "This is not an Arch based system, packages are not installed automatically."
+    echo "The following packages are required (names are from Arch, yours may differ):"
+    echo "  $(list pkglist.txt)"
+    echo "  $(list pkglist-aur.txt)"
+    ask "Have you installed all of them yourself?" || { echo "Installation aborted."; exit 1; }
+}
+
+if command -v pacman >/dev/null 2>&1; then
+    install_arch_packages
+else
+    check_manual_packages
 fi
 
 conflicts=$(mktemp)
