@@ -1,6 +1,0 @@
-[Unit]
-Description=Home backup after login
-
-[Service]
-Type=oneshot
-ExecStart=%h/.local/bin/rsync-home
