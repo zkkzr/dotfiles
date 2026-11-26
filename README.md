@@ -1,7 +1,7 @@
 <h1 align="center">Dotfiles</h1>
 
 <div align="center">
-  <img src="./screenshots/main.png" alt="Main Screenshot">
+  <img src="./screenshots/main.webp" alt="Main Screenshot">
 </div>
 
 <p align="center">Sway setup based on <a href="https://github.com/martin-djakovic/dotfiles">martin-djakovic/dotfiles</a></p>
@@ -111,17 +111,17 @@ In main Sway config, Keybinds are listed under [General Keybinds](https://github
 
 ### Tiled Windows
 <div align="center">
-  <img src="./screenshots/tile.png" alt="Tile">
+  <img src="./screenshots/tile.webp" alt="Tile">
 </div>
 
 ### Locked Screen
 <div align="center">
-  <img src="./screenshots/lock.png" alt="Lock">
+  <img src="./screenshots/lock.webp" alt="Lock">
 </div>
 
 ### SDDM Greeter
 <div align="center">
-  <img src="./screenshots/sddm.png" alt="Sddm">
+  <img src="./screenshots/sddm.webp" alt="Sddm">
 </div>
 
 
