@@ -28,7 +28,7 @@ sh install.sh
 
 ### Other distributions
 
-On Arch based systems the script installs the packages from [pkglist.txt](https://github.com/zkkzr/dotfiles/blob/main/pkglist.txt) and [pkglist-aur.txt](sway-audio-idle-inhibit-git) automatically. On other distributions it only links the configuration files with GNU stow, so install the packages from those lists yourself first (names are from Arch and may differ).
+On Arch based systems the script installs the packages from [pkglist.txt](https://github.com/zkkzr/dotfiles/blob/main/pkglist.txt) and [pkglist-aur.txt](https://github.com/zkkzr/dotfiles/blob/main/pkglist-aur.txt)) automatically. On other distributions it only links the configuration files with GNU stow, so install the packages from those lists yourself first (names are from Arch and may differ).
 
 After installing the packages, run this script to automatically link the configuration files:
 
