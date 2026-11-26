@@ -107,7 +107,7 @@ Source: [martin-djakovic/dotfiles](https://github.com/martin-djakovic/dotfiles)
 ### Sounds
 
 #### AOSP
-Notification sounds are sourced from AOSP (Android Open Source Project) (`platform/frameworks/base`, `data/sounds`) and converted from `.ogg` to `.wav`:
+Notification sounds are sourced from AOSP (Android Open Source Project) That is licensed under Apache-2.0 (`platform/frameworks/base`, `data/sounds`) and converted from `.ogg` to `.wav`:
 
 - `Notification.wav`: `notifications/ogg/Selenium.ogg`
 - `Warning.wav`: `notifications/ogg/Syrma.ogg`
