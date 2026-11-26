@@ -51,6 +51,7 @@ Alternatively, you can link the files manually
 | `Super+f` | File manager | Thunar |
 | `Super+Lalt+f` | Terminal File manager | nnn |
 | `Super+Lshift+s` | Screenshooter | Custom script |
+| `Super+Lshift+c | Color Picker | hyprpicker | 
 | `Super+Enter` | Launcher | rofi drun |
 
 ### Window Management

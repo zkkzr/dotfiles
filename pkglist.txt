@@ -37,3 +37,4 @@ wofi
 xorg-server
 xorg-xrandr
 zenity
+hyprpicker
