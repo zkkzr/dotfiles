@@ -89,6 +89,12 @@ if [ -s "$conflicts" ]; then
 fi
 rm -f "$conflicts"
 
+bookmarks="$HOME/.config/gtk-3.0/bookmarks"
+if [ ! -e "$bookmarks" ]; then
+    mkdir -p "$(dirname "$bookmarks")"
+    printf 'file://%s/%s\n' "$HOME" Downloads "$HOME" Pictures "$HOME" Videos "$HOME" Music > "$bookmarks"
+fi
+
 stow -t "$HOME" home
 fc-cache -f
 
