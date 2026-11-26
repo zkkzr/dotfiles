@@ -7,32 +7,6 @@ set $script_dir ~/.local/bin
 exec dbus-update-activation-environment --systemd --all
 exec systemctl --user start sway-session.target
 
-# **/ Variables /**
-
-# Terminal
-set $terminal alacritty
-
-# File manager
-set $file_browser thunar
-
-# Terminal File Manager
-set $terminal_filemanager nnn
-
-# Emoji Manager
-set $emoji rofimoji
-
-# Web browser
-set $web_browser firefox
-
-# Color Picker
-set $color hyprpicker --autocopy
-
-# Screenshooter
-set $screenshot ~/.local/bin/screenshot
-
-# Launcher
-set $launcher rofi -show drun
-
 # Workspaces
 set $ws1  1
 set $ws2  2
