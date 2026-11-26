@@ -21,8 +21,7 @@ Auto Installation Script itself:
 ~~~bash
 git clone https://github.com/zkkzr/dotfiles.git ~/dotfiles
 cd dotfiles
-chmod +x install.sh
-./install.sh
+sh install.sh
 ~~~
 
 ---
@@ -50,15 +49,22 @@ waybar
 wl-clipboard
 wofi
 sway-audio-idle-inhibit-git
+sddm
+imagemagick
+noto-fonts-emoji
+rofmoji
+polkit-gnome
+rm-applet
+keepassxc
+thunar
 ~~~
 
-After installing the packages, run this script to automaticslly link the configuration files:
+After installing the packages, run this script to automatically link the configuration files:
 
 ~~~bash
 git clone https://github.com/zkkzr/dotfiles.git ~/dotfiles
 cd dotfiles
-chmod +x manual_install.sh
-./manual_install.sh
+sh manual_install.sh
 ~~~
 
 Alternatively, you can link the files manually
@@ -83,7 +89,7 @@ Alternatively, you can link the files manually
 | `Lalt+f4` | Kill focused window |
 | `Super+h` | Switch to horizontal tiling |
 | `Super+v` | Switch to vertical tiling |
-| `Super+Lalt+Space` | Switch focused winodow between tiling / floating |
+| `Super+Lalt+Space` | Switch focused window between tiling / floating |
 | `Super+Mouse1` (Hold) | Drag focused window |
 
 ### System
@@ -91,6 +97,8 @@ Alternatively, you can link the files manually
 | :--- | :--- |
 | `Super+Lshift+c` | Reload Sway and Waybar |
 | `Super+Lalt+q` | Display power menu |
+| `Super+l` | Lock session |
+| `Super+Shift+e | Exit wayland sesion |
 
 In main Sway config, Keybinds are listed under [General Keybinds](https://github.com/zkkzr/dotfiles/blob/main/home/.config/sway/config#L101) Section
 
@@ -100,11 +108,6 @@ In main Sway config, Keybinds are listed under [General Keybinds](https://github
 - **Backgrounds:** Wallpapers are stored in `~/.local/share/backgrounds`.
 
 ## Gallery
-
-### Floating Window
-<div align="center">
-  <img src="./screenshots/main.png" alt="Main">
-</div>
 
 ### Tiled Windows
 <div align="center">

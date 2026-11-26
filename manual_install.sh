@@ -8,7 +8,6 @@ if [ "$(id -u)" -eq 0 ]; then
     exit 1
 fi
 
-# Проверка наличия stow
 if ! command -v stow >/dev/null 2>&1; then
     echo "Error: 'stow' is not installed. Please install it first."
     exit 1
@@ -37,7 +36,6 @@ rm -f "$conflicts"
 stow -t "$HOME" home
 fc-cache -f
 
-# --- Systemd services ---
 if systemctl --user daemon-reload 2>/dev/null; then
     systemctl --user enable update-notification.timer maintenance-notification.timer
 fi

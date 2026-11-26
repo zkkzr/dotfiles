@@ -4,7 +4,6 @@ brightnessctl
 dunst
 grim
 hyprlock
-lightdm
 nnn
 rofi
 rsync
@@ -17,5 +16,4 @@ wl-clipboard
 wofi
 imagemagick
 sddm
-
 noto-fonts-emoji
