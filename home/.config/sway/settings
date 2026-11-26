@@ -6,14 +6,29 @@ set $down s
 set $up w
 set $right d
 
-# Terminal emulator
-set $term alacritty
-# Application launcher
-set $menu 'rofi -show drun'
-# Web browser
-set $web 'librewolf'
-# Graphical file browser
+# Terminal
+set $terminal alacritty
+
+# File manager
 set $file_browser thunar
+
+# Terminal File Manager
+set $terminal_filemanager nnn
+
+# Emoji Manager
+set $emoji rofimoji
+
+# Web browser
+set $web_browser firefox
+
+# Color Picker
+set $color hyprpicker --autocopy
+
+# Screenshooter
+set $screenshot ~/.local/bin/screenshot
+
+# Launcher
+set $launcher rofi -show drun
 
 # Colors
 set $accent #afa193
