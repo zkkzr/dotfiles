@@ -213,7 +213,6 @@ exec_always {
     pidof nm-applet || nm-applet
     pidof dunst || dunst
     #pidof steam || env GDK_DPI_SCALE=$dpi_scale steam -silent
-    pidof keepassxc || keepassxc
 }
 
 for_window [app_id="calendar-popup"] floating enable, border pixel 1, move position cursor, move left 130 px, move down 20 px
