@@ -8,37 +8,15 @@
 
 ## Installation
 
-### Auto Installation Script
-
-**Please note:** The installation script is for **Arch Linux** only.
-
-For other distributions, please refer to the [Manual Installation](https://github.com/zkkzr/dotfiles/blob/main/README.md#other-distributions)
-
----
-
-Auto Installation Script itself:
+On Arch based systems the script installs the packages from [pkglist.txt](pkglist.txt) and [pkglist-aur.txt](pkglist-aur.txt) automatically. On other distributions it only links the configuration files with GNU stow, so install the packages from those lists yourself first (names are from Arch and may differ). The script asks for confirmation before continuing.
 
 ~~~bash
 git clone https://github.com/zkkzr/dotfiles.git ~/dotfiles
-cd dotfiles
+cd ~/dotfiles
 sh install.sh
 ~~~
 
----
-
-### Other distributions
-
-On Arch based systems the script installs the packages from [pkglist.txt](https://github.com/zkkzr/dotfiles/blob/main/pkglist.txt) and [pkglist-aur.txt](https://github.com/zkkzr/dotfiles/blob/main/pkglist-aur.txt)) automatically. On other distributions it only links the configuration files with GNU stow, so install the packages from those lists yourself first (names are from Arch and may differ).
-
-After installing the packages, run this script to automatically link the configuration files:
-
-~~~bash
-git clone https://github.com/zkkzr/dotfiles.git ~/dotfiles
-cd dotfiles
-sh install.sh
-~~~
-
-Alternatively, you can link the files manually
+Alternatively, you can link the files manually with `stow -t ~ home`.
 
 ## Keybinds
 
@@ -96,6 +74,15 @@ In main Sway config, Keybinds are listed under [General Keybinds](https://github
   <img src="./screenshots/sddm.webp" alt="Sddm">
 </div>
 
+## Licenses
+
+Original files in this repository (configs, scripts, SDDM theme) are licensed under the MIT License, see `LICENSE`. Third-party material keeps its own license:
+
+- **Base configuration:** [martin-djakovic/dotfiles](https://github.com/martin-djakovic/dotfiles), no license specified upstream.
+- **Yaru-Amber** (`home/.local/share/themes`): fork of [Yaru](https://github.com/ubuntu/yaru) taken from the base repository. Yaru assets are CC BY-SA 4.0, scripts are GPL-3.0.
+- **cava shaders** (`home/.config/cava/shaders`): MIT, © rezky_nightky, see headers in the files.
+- **Papirus** (GPL-3.0), **JetBrains Mono Nerd Font** (OFL-1.1), **Ubuntu font** (Ubuntu Font Licence 1.0): installed from packages.
+- **Wallpapers** (`home/.local/share/backgrounds`): authors and licenses are unknown. If you are the author and want wallpaper removed, please open an issue.
 
 ## Credits
 
@@ -107,7 +94,7 @@ Source: [martin-djakovic/dotfiles](https://github.com/martin-djakovic/dotfiles)
 ### Sounds
 
 #### AOSP
-Notification sounds are sourced from AOSP (Android Open Source Project) That is licensed under Apache-2.0 (`platform/frameworks/base`, `data/sounds`) and converted from `.ogg` to `.wav`:
+Notification sounds are sourced from AOSP (Android Open Source Project) (`platform/frameworks/base`, `data/sounds`) and converted from `.ogg` to `.wav`:
 
 - `Notification.wav`: `notifications/ogg/Selenium.ogg`
 - `Warning.wav`: `notifications/ogg/Syrma.ogg`
